@@ -9,25 +9,24 @@ A model using GP priors and NMF to facilitate multi-omics data integration.
 
 # Quick start
 * import packages
-'''
+```
 from GPNAF.model import *
 from GPNAF.utils import *
-'''
+```
 * prepare the data (load X_1, X_2 and S from your Anndata objects)
-'''
+```
 S_t = to_torch_tensor(S, device, dtype=torch.float32)
 X1_t = to_torch_tensor(X_1, device, dtype=torch.float32)
 X2_t = to_torch_tensor(X_2, device, dtype=torch.float32)
-'''
+```
 * training
-'''
+```
 model = GPNSFModel(S=S_t, p=p, q=q, K=K, M=M).to(device)
-
 model = train_model(model=model, X1_t=X1_t, X2_t=X2_t)
-'''
+```
 * add latent representations as adata.obs
-'''
+```
 add_latent_to_adata(adata1, model) # adata1 is either your Anndata object
-'''
+```
 A complete demo is shown in [run_GPNSF/simulation_1.ipynb](https://github.com/dd719/gpnsf/blob/main/run_GPNSF/simulation_1.ipynb).
 
