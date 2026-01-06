@@ -3,7 +3,7 @@ A model using GP priors and NMF to facilitate multi-omics data integration.
 # Model features
 * Reconstruct original count matrices using designed likelihood estimation. Modality 1 is set to be negative binomial distributed (for RNA), modality 2 is given three options for users to choose: negative binomial distributed, binomial distributed and Poisson distributed.
 * A GP prior is added in the low-dimensional latent space for modeling spatial similarity. Sparse GP and variational inference are conducted to make the model scalable when dealing with large dataset (e.g. >5k spots).
-The specific model discription and detailed derivation of the loss function are included in [model_description.pdf](https://github.com/dd719/gpnsf/blob/main/model_description.pdf).
+The specific model description and detailed derivation of the loss function are included in [model_description.pdf](https://github.com/dd719/gpnsf/blob/main/model_description.pdf).
 # Model architecture
 ![](model_architecture.png)
 
