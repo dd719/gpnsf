@@ -29,5 +29,5 @@ model = train_model(model=model, X1_t=X1_t, X2_t=X2_t)
 '''
 add_latent_to_adata(adata1, model) # adata1 is either your Anndata object
 '''
-A complete demo is shown in ![](run_GPNSF/simulation_1.ipynb) .
+A complete demo is shown in [run_GPNSF/simulation_1.ipynb](https://github.com/dd719/gpnsf/blob/main/run_GPNSF/simulation_1.ipynb).
 
